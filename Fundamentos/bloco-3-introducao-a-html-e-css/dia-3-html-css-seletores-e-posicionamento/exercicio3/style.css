@@ -1,0 +1,50 @@
+h1, p {
+    text-align: center;
+}
+
+li:hover {
+    border-color: black;
+}
+
+li:active {
+    font-style: italic;
+}
+
+li {
+    list-style: none;
+}
+
+div:hover {
+    border: 5px double black;
+}
+
+#verde {
+    background-color: green;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    
+}
+
+#azul {
+    background-color: blue;
+    text-decoration: underline;
+    }
+
+#vermelho {
+    background-color: red;
+    width: -10px;
+    letter-spacing: -1px;
+    padding: 1em;
+    font-style: italic;
+}
+
+#marrom {
+    background-color: brown;
+    text-shadow: 2px 2px white;
+}
+
+#amarelo {
+    background-color: yellow;
+    text-align: center;
+    font-style: italic;
+}
