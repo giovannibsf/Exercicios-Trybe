@@ -2,11 +2,11 @@ ol {
     background-color: yellow;
 }
 
-fonteverde {
+ol li:nth-child(even) {
     color: green;
 }
 
-li.maiuscula {
+ol li:nth-child(odd) {
     text-transform: uppercase;
 }
 
