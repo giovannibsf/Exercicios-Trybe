@@ -10,11 +10,11 @@ ol li:nth-child(odd) {
     text-transform: uppercase;
 }
 
-.vermelho {
+h1, h3{
     color:red;
 }
 
-.italico{
+h1 em {
     font-size: 40px;
     border: 1px solid black;
 }
