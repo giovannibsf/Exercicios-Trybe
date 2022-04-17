@@ -1,9 +1,8 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>HTML</title>
-        <link rel="stylesheet" type ="text/css" href="style.css">
         <style>
             h1 {
                 font-size: 65px;
@@ -39,7 +38,6 @@
             #cinza {
                 background-color: grey;
             }
-            
 
         </style>
     </head>
@@ -51,6 +49,8 @@
             <li id="azul">azul</li>
             <li id="cinza">cinza</li>
         </ul>
-        
+
+        <img src="images/praia.jpg">
     </body>
+            
 </html>
