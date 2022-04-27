@@ -1,0 +1,22 @@
+* {
+    text-align: center;
+    
+}
+body {
+    background-color: rgb(201, 200, 199);
+}
+
+
+#descrição {
+    text-align: left;
+}
+
+.box {
+    border-style: solid;
+    width: 60px;
+    height: 60px;
+    border-radius: 35%;
+    display: inline-block;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, yellow , black);
+}
