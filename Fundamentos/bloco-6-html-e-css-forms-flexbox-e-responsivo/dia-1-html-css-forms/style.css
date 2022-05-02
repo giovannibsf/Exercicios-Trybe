@@ -8,7 +8,7 @@ body {
 
 
 #descrição {
-    text-align: left;
+    text-align: center;
 }
 
 .box {
@@ -19,4 +19,9 @@ body {
     display: inline-block;
     margin-top: 20px;
     background-image: linear-gradient(to right, yellow , black);
+}
+
+button .safada {
+    width: 30px;
+    display: inline-block;
 }
