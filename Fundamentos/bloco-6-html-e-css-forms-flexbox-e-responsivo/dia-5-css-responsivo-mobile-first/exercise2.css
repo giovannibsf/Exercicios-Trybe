@@ -1,0 +1,225 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing:content-box;
+  }
+
+/* iphone 12 Pro */
+@media (max-width: 391px) {
+
+    * {
+        box-sizing: border-box;
+        text-align: center;
+        margin: 0;
+    }
+    
+    body {
+        background-color: white;
+        font-size: 1.3em;
+                
+    }
+
+   
+    header p {
+        text-align: center;
+        font-weight: bold;
+        padding: 20px
+
+        
+    }
+
+    li {
+       list-style: none ;
+    }
+    nav {
+        margin-left: 0;
+    }
+    
+    nav ul {
+        display: flex;
+        text-align: center;
+        justify-content: flex-start;
+        justify-content: space-around;
+        padding: 15px;
+        
+    }    
+    
+ 
+    
+    .aside-one h2 {
+        padding-top: 10px;
+        padding-bottom: 8px;
+        
+    }
+    
+    .aside-one ul {
+        padding: 3px;
+
+    }
+    .aside-one ul li {
+        line-height: 30px;
+    }
+
+
+   
+    .main-content h1 {
+        font-size: xx-large;
+    }
+    .main-content p {
+        line-height: 1.4;
+        
+    }
+
+    .aside-two {
+        padding: 20px;
+        
+    }
+
+    .aside-two h2 {
+        padding-top: 10px;
+        
+        
+    }
+
+    .aside-two ul {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        
+        
+    }
+
+    .aside-two ul li {
+        
+        padding: 3px;
+    }
+
+    footer {
+        padding: 8px;
+        
+        
+    }
+}
+
+
+
+
+/* ipad air */
+@media (min-width: 392px) {
+    * {
+        margin:0;
+        
+    }
+    body {
+        background-color: white;
+        text-align: center;
+    }
+
+    header p {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    header nav {
+        padding: 10px;
+    }
+    
+    header nav ul{
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        justify-content: space-around;
+        font-size: 1.2em;
+        list-style: none;
+    }
+   
+    nav ul {
+        display: flex;
+        padding: 10px;
+    }
+
+    .aside-one h2 {
+        padding-top: 10px;
+        padding-bottom: 0;
+        font-size: 1.8em;
+    }
+    .aside-one ul {
+        font-size: 1.4em;
+        list-style: none;
+        padding: 10px 30px 30px 30px;
+    }
+    .aside-one ul li {
+        padding: 7px;
+    }
+
+    .main-content {
+        padding: 10px
+    }
+
+    .main-content p {
+        font-size: 1.4em;
+        line-height: 30px;
+    }
+
+    .aside-two {
+        padding: 10px;
+    }
+    .aside-two h2 {
+        padding: 6px;
+    }
+
+    .aside-two ul {
+        list-style: none;
+        padding: 6px;
+    }
+
+    .aside-two ul li {
+        font-size: 1.2em;
+    }
+
+    footer {
+      padding: 10px;  
+    }
+}
+
+
+
+@media (min-width: 821px) {
+    body {
+        background-color: white; 
+    }
+
+    header p {
+        padding: 15px;
+        font-size: 1.5em;
+    }
+
+    header nav ul{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    header nav ul li {
+        display: inline;
+        padding: 8px;
+               
+    }
+    .main-content p {
+        font-size: 1.3em;
+        text-align: justify;
+        padding: 3px;
+        line-height: 30px;
+    }
+
+}
+
+  /* Realize as seguintes tarefas:
+1 - Utilizando a abordagem mobile first e media queries, crie três versões de layout diferentes para essa página. Cada layout deve corresponder a um tamanho diferente de página (pequeno, médio e grande). Faça pelo menos um commit para cada layout;
+2 - Para fazer isso de forma adequada, você deve prestar atenção no conteúdo da página e pensar em como mostrá-lo em cada um dos tamanhos de tela:
+Onde a lista de capítulos deve estar posicionada?
+Como a história deve ser mostrada?
+Como o cabeçalho deve ser posicionado?
+O que fazer com as informações do autor em cada tamanho de tela?
+3 - Talvez você precise alterar o HTML um pouco, adicionando elementos para facilitar a estilização, ou talvez mudando um bloco de lugar dentro da página. */
