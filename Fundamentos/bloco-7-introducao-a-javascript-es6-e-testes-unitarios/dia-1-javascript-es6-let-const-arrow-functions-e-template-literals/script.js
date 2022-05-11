@@ -66,14 +66,40 @@
 //   console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente`); 
 
 
-const fat = (n) => {
-  if(n > 1) {
-    return n * fat(n-1);
-  }
+// Crie uma função que receba um número e retorne seu fatorial.
+// Na matemática, o fatorial de um número não negativo N, com a notação N!, é o produto de todos os inteiros menores ou iguais a N. Exemplo: 4! = 4 * 3 * 2 * 1 = 24.
+// Bônus (opcional): tente fazer o mesmo exercício de forma recursiva. Spoiler: É possível resolver com uma linha usando ternary operator.
 
-  return n
-}
+
+
+const fat = (n) => {
+  return (n > 1 ? n * fat(n-1) : 1);
+
+} 
   
-console.log(fat(5))
+  // if(n > 1) {
+  //   return n * fat(n-1);
+  // }
+
+
+
+  // Crie uma função que receba uma frase e retorne qual a maior palavra.
+// const palavra = (frase) => {
+//   const array = frase.split(" ")
+//   let maior = " "
+//   for (let i = 0; i < array.length; i +=1) {
+//     if (array[i].length > maior.length) {
+//       maior = array[i]
+//     }
+//       }
+//       return maior
+    
+// }
+    
+    
+  
+
+
+
 
 
