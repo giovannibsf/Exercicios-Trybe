@@ -1,12 +1,12 @@
-const botao = document.getElementById("botao")
+// const botao = document.getElementById("botao")
 
-function defaul(event) {
-    event.preventDefault()
-    console.log("fui chamada")
+// function defaul(event) {
+//     event.preventDefault()
+//     console.log("fui chamada")
 
-}
+// }
 
-botao.addEventListener("click", defaul)
+// botao.addEventListener("click", defaul)
 
 
 // const botaoLimpar = document.createElement("button")
@@ -14,3 +14,19 @@ botao.addEventListener("click", defaul)
 // const botoes = document.getElementById("botoes")
 // botoes.appendChild(botaoLimpar)
 // botaoLimpar.setAttribute("type", "reset")
+
+// function objeto(nome, idade) {
+//     return {
+//         nome: nome,
+//         idade: idade
+//     }
+// }
+
+// console.log(objeto("joaquim", 35))
+
+
+
+const objeto = (nome, idade) => ({nome: nome, idade: idade})
+
+console.log(objeto("joaquim", 35))
+
