@@ -104,4 +104,51 @@ const funcao = (objeto, chave, valor) => {
 
   return "nao tem"
 }
-console.log(funcao(lesson3, 'materia', 'Maria Clara'))
+
+
+
+
+
+
+// Bonus - 🚀 Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+const quantidade = (chave, valor) =>{
+  var nEstudantes = 0
+  const array =  Object.entries(allLessons)
+  for(i=0; i < array.length; i+=1) {
+    if(array[i][1][chave].includes(valor)) {
+      nEstudantes = nEstudantes + array[i][1]['numeroEstudantes']
+    }
+  }  
+  return nEstudantes  
+
+  }
+ 
+
+// 🚀 Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
+
+const pegarMateriaEstudante = (objeto, professor) => {
+  let estudantes = 0;
+  let materias= []
+  const array = Object.values(objeto)
+  for (let i=0; i< array.length; i+=1) {
+    if(array[i]['professor'].includes(professor)) {
+      estudantes += array[i]['numeroEstudantes']
+      materias.push(array[i]['materia'])
+    }
+  }
+  return {materiasTotais: materias, estudantesTotais: estudantes}
+
+}
+const relatorio = (objeto, professor) => {
+  let relato = {}
+  relato['professor'] = professor
+  Object.assign(relato, pegarMateriaEstudante(allLessons, professor))
+  return relato
+}
+console.log(relatorio(allLessons, 'Maria Clara'))
+
+/* {
+  professor: 'Maria Clara',
+  aulas: [ 'Matemática', 'Matemática' ],
+  estudantes: 30
+} */
