@@ -123,7 +123,13 @@ function fantasyOrScienceFictionAuthors() {
   //🚀 7 - Encontre o nome do livro escrito pela pessoa cujo nome registrado começa com três iniciais.
 
   function authorWith3DotsOnName() {
-    return books.filter((element)=> element.author.name[0])
+    return books.filter((element)=> element.author.name[1] == '.' && element.author.name[4] == '.' && element.author.name[7] == '.')[0].name
   }
 
-  console.log(authorWith3DotsOnName())
+  //outra forma de resolver: 
+  function authorWith3DotsOnName() {
+    return books.find((element) => (
+      element.author.name.split(' ')
+        .filter((item) => item.endsWith('.')).length === 3
+    )).name;
+  }
