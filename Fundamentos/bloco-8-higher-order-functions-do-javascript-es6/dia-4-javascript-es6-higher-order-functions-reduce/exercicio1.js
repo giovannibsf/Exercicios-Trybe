@@ -3,25 +3,6 @@
 
 // const getBigger = (bigger, number) => ((bigger > number) ? bigger : number);
 
-// const bigger = numbers.reduce(getBigger, 175);
-
-
-const numbers = [18, 19, 23, 53, 4, 5, 76, 23, 54];
-
-
-const somatorio = (acc, cur) => acc + cur
-
-const soma = () => {
-    return numbers.filter((item) => item % 2 === 0).reduce(somatorio, 0)
-    
-}
-
-
-// const somatorio2 = (currentValue, number) => (
-//     (number % 2 === 0) ? currentValue + number : currentValue
-//   );
-  
-//   const soma2 = (array) => array.reduce(somatorio2, 0);
 
 const estudantes = [
     {
@@ -98,6 +79,182 @@ const estudantes = [
     },
   ];
 
+  const melhorNota = (acc, materia) => {
+    if (acc.nota > materia.nota) return acc;
+    return materia;
+  };
+  
+  const reportBetter = (students) => students.map((student) => ({
+    name: student.nome,
+    materia: student.materias.reduce(melorNota).name}));
+  
+  
+
+
+
+
+// 1 - Dada uma matriz, transforme em um array.
+
+
+const arrays = [
+    ['1', '2', '3'],
+    [true],
+    [4, 5, 6],
+  ];
+  
+
+  
+  function flatten(){
+     return arrays.reduce((acc, curr) => acc = acc.concat(curr)
+        ,[])
+  }
+  
+   
+
+const books = [
+    {
+      id: 1,
+      name: 'As Crônicas de Gelo e Fogo',
+      genre: 'Fantasia',
+      author: {
+        name: 'George R. R. Martin',
+        birthYear: 1948,
+      },
+      releaseYear: 1991,
+    },
+    {
+      id: 2,
+      name: 'O Senhor dos Anéis',
+      genre: 'Fantasia',
+      author: {
+        name: 'J. R. R. Tolkien',
+        birthYear: 1892,
+      },
+      releaseYear: 1954,
+    },
+    {
+      id: 3,
+      name: 'Fundação',
+      genre: 'Ficção Científica',
+      author: {
+        name: 'Isaac Asimov',
+        birthYear: 1920,
+      },
+      releaseYear: 1951,
+    },
+    {
+      id: 4,
+      name: 'Duna',
+      genre: 'Ficção Científica',
+      author: {
+        name: 'Frank Herbert',
+        birthYear: 1920,
+      },
+      releaseYear: 1965,
+    },
+    {
+      id: 5,
+      name: 'A Coisa',
+      genre: 'Terror',
+      author: {
+        name: 'Stephen King',
+        birthYear: 1947,
+      },
+      releaseYear: 1986,
+    },
+    {
+      id: 6,
+      name: 'O Chamado de Cthulhu',
+      genre: 'Terror',
+      author: {
+        name: 'H. P. Lovecraft',
+        birthYear: 1890,
+      },
+      releaseYear: 1928,
+    },
+  ];
+  
+//  2 -  Crie uma string com os nomes de todas as pessoas autoras.
+function reduceNames() {
+  return books.reduce((acc, crr, index) => {
+    if(index == books.length -1) {
+      return acc += `${crr.author.name}.`
+    } else {
+      return acc += `${crr.author.name}, `
+    }
+  }, '')
+}
+
+
+
+
+
+
+
+// 🚀 3- Calcule a média de idade que as pessoas autoras tinham quando seus respectivos livros foram lançados.
+
+const somaIdades = (acc, crr) => {
+  return acc += (crr.releaseYear - crr.author.birthYear)
+}
+
+
+function averageAge() {
+  return books.reduce((somaIdades),0)/(books.length)
+}
+
+
+
+// 🚀 4- Encontre o livro com o maior nome.
+const maiorLivro = (acc, crr) => {
+  return (acc.name.length > crr.name.length) ? acc : crr 
+}
+
+function longestNamedBook() {
+  return books.reduce(maiorLivro)
+}
+
+
+
+
+
+//🚀 5- Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+
+const names = [
+  'Aanemarie', 'Adervandes', 'Akifusa',
+  'Abegildo', 'Adicellia', 'Aladonata',
+  'Abeladerco', 'Alarucha', 'Adieidy',
+];
+
+
+
+function containsA() {
+  return names.reduce((acc, crr) => 
+    acc + crr.split('').reduce((ant, atual) =>{
+      if(atual == 'a' || atual == 'A') {
+        return ant += 1
+      }  return ant
+    }, 0)
+   ,0)
+ 
+}
+
+
+
+
+//🚀 6.**- Agora vamos criar um novo array de objetos a partir das informações abaixo, onde cada objeto terá o formato { name: nome do aluno, average: media das notas }. Para isso vamos assumir que a posição 0 de notas refere-se ao aluno na posição 0 de alunos, aqui além de reduce será necessário utilizar também a função map. Dica: Você pode acessar o index do array dentro de map, e você pode ver o objeto esperado na constante expected.
+
+
+const students = ['Pedro Henrique', 'Miguel', 'Maria Clara'];
+const grades = [[9, 8, 10, 7, 5], [10, 9, 9, 10, 8], [10, 7, 11, 8, 9]];
+
+function studentAverage() {
+  return students.map((element, index) => ({
+    name: element,
+    average: (grades[index].reduce((acc, curr) => (acc + curr) ,0)/grades[index].length)
+  }))
+}
+
+console.log(studentAverage())
 
   const conferiNota = (acc, crr) => {
      if(acc.nota > crr.nota) {
@@ -126,3 +283,4 @@ const estudantes = [
 //     materia: student.materias.reduce(getBestClass).name}));
   
 //   console.log(reportBetter(estudantes));
+
