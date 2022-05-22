@@ -1,9 +1,7 @@
-const numbers = [50, 85, -30, 3, 15, 150];
+// const numbers = [50, 85, -30, 3, 15, 150];
 
 
-const getBigger = (bigger, number) => ((bigger > number) ? bigger : number);
-
-const bigger = numbers.reduce(getBigger, 175);
+// const getBigger = (bigger, number) => ((bigger > number) ? bigger : number);
 
 
 const estudantes = [
@@ -257,3 +255,32 @@ function studentAverage() {
 }
 
 console.log(studentAverage())
+
+  const conferiNota = (acc, crr) => {
+     if(acc.nota > crr.nota) {
+         return acc;
+     }  
+        return crr;
+  }
+
+  const relatorio = (array) => array.map((element) => ({
+      name: element.nome,
+      materia: element.materias.reduce(conferiNota).name}))
+
+
+  
+
+  console.log(relatorio(estudantes))
+
+
+// const getBestClass = (acc, materia) => {
+//     if (acc.nota > materia.nota) return acc;
+//     return materia;
+//   };
+  
+//   const reportBetter = (students) => students.map((student) => ({
+//     name: student.nome,
+//     materia: student.materias.reduce(getBestClass).name}));
+  
+//   console.log(reportBetter(estudantes));
+
