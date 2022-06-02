@@ -1,0 +1,16 @@
+* {
+    background-color: antiquewhite;
+}
+
+li {
+    padding: 10px;
+    font-size: large;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    border-bottom-style:ridge;
+    padding-bottom: 10px;
+    
+}
