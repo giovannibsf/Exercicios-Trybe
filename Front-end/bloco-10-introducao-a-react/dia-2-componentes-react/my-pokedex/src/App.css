@@ -1,0 +1,36 @@
+
+#titulo {
+  text-align: center;
+  text-decoration:double;
+  font-family: fantasy;
+  color: red;
+  padding: 30px 0px 30px 0px;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-direction: column;
+  max-width: 100% ;
+  max-height: 500px;
+}
+
+.pokemons {
+  display: flex;
+  border-style:groove;
+  border-radius: 30px;
+  width: 40%;
+  margin-bottom: 30px;
+
+
+}
+
+.pokemon-card {
+  padding-right: 50px;
+  padding-left: 10px;
+
+}
+
+#imagem {
+  width: 130px;
+
+}
