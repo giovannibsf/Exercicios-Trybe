@@ -7,7 +7,7 @@ class Pokedex extends Component {
         return(
             <ol className="pokemon-list">{
               pokemons.map((pokemon) => (
-                <Pokemon poks={ pokemon } />
+                <Pokemon key={pokemon.id} poks={ pokemon } />
               ))
     }
             </ol>

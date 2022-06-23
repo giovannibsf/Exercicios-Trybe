@@ -21,14 +21,14 @@ class Pokemon extends Component {
 }
 
 Pokemon.propTypes = {
-    id: PropTypes.number.isRequired,
-    name: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
+    id: PropTypes.number,
+    name: PropTypes.string,
+    type: PropTypes.string,
     averageWeight: PropTypes.shape({
-        value: PropTypes.number.isRequired,
-        measurementUnit: PropTypes.string.isRequired
+        value: PropTypes.number,
+        measurementUnit: PropTypes.string,
     }),
-    image: PropTypes.string.isRequired
+    image: PropTypes.string,
 }
 
 export default Pokemon;
